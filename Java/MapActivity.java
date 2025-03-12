@@ -115,7 +115,7 @@ ActivityCompat.OnRequestPermissionsResultCallback,PlacesListener {
 
         menu_map.setTextColor(ContextCompat.getColor(this, R.color.text_blue));
 
-        Places.initialize(getApplicationContext(), "AIzaSyCuGUBEYkJ4vCfp0d5kEVGONSEVSEpiGKU");
+        Places.initialize(getApplicationContext(), "api key");
         placesClient = Places.createClient(this);
 
 
