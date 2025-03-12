@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/editTextContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="출발지"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+        <EditText
+            android:id="@+id/coststart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="출발지를 입력해주세요." />
+
+        <Button
+            android:id="@+id/startsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editTextContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextContainer">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="도착지"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+        <EditText
+            android:id="@+id/costdest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="도착지를 입력해주세요." />
+
+        <Button
+            android:id="@+id/destinationsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/toolBar2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/editTextContainer2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/train"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="기차"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="차"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/walk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="도보"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/bike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="자전거"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/maprelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar2"
+        android:layout_above="@+id/toolBar">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/map2"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <TextView
+            android:id="@+id/elapsedTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map2"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menu_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="추천"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_map"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="지도"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="일정"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_costtime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="비용/시간"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_review"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="후기"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_myinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="내정보"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+    </LinearLayout>
+
+</RelativeLayout>

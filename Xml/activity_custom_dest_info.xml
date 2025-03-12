@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <!-- 여행지 사진 -->
+
+    <TextView
+        android:id="@+id/mapdestinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingEnd="8dp"
+        android:text="장소 이름"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/mapplaceImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/mapdestinfo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_home" />
+
+    <TableLayout
+        android:id="@+id/infoTable1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapplaceImage"
+        android:padding="16dp">
+
+        <!-- 주소 -->
+        <TableRow>
+
+        </TableRow>
+    </TableLayout>
+
+    <!-- 정보 표시를 위한 테이블 레이아웃 -->
+    <TableLayout
+        android:id="@+id/infoTable2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTable1"
+        android:padding="16dp">
+
+        <!-- 주소 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="븐류:"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mapcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="여기에 분류를 설정하세요" />
+        </TableRow>
+
+        <!-- 전화 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소:"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/mapaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="여기에 주소를 설정하세요" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 장소 저장하기 버튼 -->
+    <Button
+        android:id="@+id/mapsavePlaceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTable2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="장소 저장하기" />
+</RelativeLayout>

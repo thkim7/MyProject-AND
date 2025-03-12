@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="여행 유형"/>
+
+    <CheckBox
+        android:id="@+id/exp_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="체험 여행"/>
+    <CheckBox
+        android:id="@+id/nat_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자연 여행"/>
+    <CheckBox
+        android:id="@+id/his_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="역사 여행"/>
+    <CheckBox
+        android:id="@+id/the_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="테마 여행"/>
+
+    <Button
+        android:id="@+id/btnApplyFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:layout_gravity="end|bottom"/>
+</LinearLayout>

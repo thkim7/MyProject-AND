@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/editTextContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextTravelDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="여행지를 입력해주세요." />
+
+        <Button
+            android:id="@+id/destsearchbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/editTextContainer"
+        android:layout_above="@+id/toolBar">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp">
+
+            <Button
+                android:id="@+id/nomal"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                style="@style/MyButtonStyle"
+                android:text="기본" />
+
+            <Button
+                android:id="@+id/cafe"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                style="@style/MyButtonStyle"
+                android:text="주변 카페" />
+
+            <Button
+                android:id="@+id/food"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                style="@style/MyButtonStyle"
+                android:text="주변 식당" />
+
+            <Button
+                android:id="@+id/hotel"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                style="@style/MyButtonStyle"
+                android:text="주변 숙박" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menu_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="추천"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_map"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="지도"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="일정"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_costtime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="비용/시간"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_review"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="후기"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_myinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="내정보"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/recyclerViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toolBar"
+        android:orientation="vertical">
+
+        <!-- 장소 이름을 표시하는 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPlaces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 여행지 사진 -->
+    <ImageView
+        android:id="@+id/placeImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_home"
+    android:scaleType="centerCrop" />
+
+    <TableLayout
+        android:id="@+id/infoTable1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/placeImage"
+        android:padding="16dp">
+
+        <!-- 주소 -->
+        <TableRow>
+            <TextView
+                android:id="@+id/destinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:text="여행지 설명"
+                android:paddingEnd="8dp"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 정보 표시를 위한 테이블 레이아웃 -->
+    <TableLayout
+        android:id="@+id/infoTable2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTable1"
+        android:padding="16dp">
+
+        <!-- 주소 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소:"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_getaddr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="여기에 주소를 설정하세요" />
+        </TableRow>
+
+        <!-- 전화 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전화:"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_gettel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="여기에 전화번호를 설정하세요" />
+        </TableRow>
+
+        <!-- 홈페이지 -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈페이지:"
+                android:paddingEnd="8dp"
+                android:gravity="end"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/websiteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="여기에 홈페이지 URL을 설정하세요" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 지도 표시 -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+    android:layout_below="@+id/infoTable2"
+    android:layout_marginTop="16dp" />
+
+    <!-- 장소 저장하기 버튼 -->
+    <Button
+        android:id="@+id/savePlaceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapFragment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="장소 저장하기" />
+</RelativeLayout>

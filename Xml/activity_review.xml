@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolBar">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="후기"></TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menu_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="추천"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_map"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="지도"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="일정"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_costtime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="비용/시간"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_review"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="후기"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+
+        <Button
+            android:id="@+id/menu_myinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="내정보"
+            android:textSize="10sp"
+            android:textColor="#0054Ff"/>
+    </LinearLayout>
+</RelativeLayout>
